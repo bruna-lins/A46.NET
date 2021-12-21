@@ -1,0 +1,723 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@500;600&family=Courgette&family=M+PLUS+1:wght@200&family=Montserrat:wght@200;300&family=Nunito:ital,wght@0,200;0,500;0,600;0,700;1,300&family=Poppins:wght@200&family=Satisfy&display=swap');
+
+/* Variáveis */
+:root {
+    --color-primary: #403f3f;
+    --color-secondary: #427a5b !important;
+    --color-white: #eeeeee;
+    --font-primary: 'Nunito', sans-serif;
+    --font-secondary: 'Satisfy', cursive;
+}
+
+* {
+    margin: 0;
+    font-family: var(--font-primary);
+}
+
+a {
+    text-decoration: none;
+}
+
+    a:hover {
+        color: var(--color-primary);
+    }
+
+header {
+    position: relative;
+    height: 75vh;
+    overflow: hidden;
+}
+
+.banner video {
+    position: absolute;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+}
+
+.title {
+    position: relative;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.title-primary {
+    color: var(--color-secondary);
+    font-family: var(--font-secondary);
+    position: relative;
+}
+
+.title .title-primary:before {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, -40%);
+    font-size: 110px;
+    opacity: 0.1;
+    z-index: -1;
+}
+
+.title-secondary {
+    font-family: var(--font-secondary);
+    font-weight: 600;
+}
+
+/* Navbar */
+
+.navbar-brand {
+    font-family: var(--font-secondary);
+    font-weight: 700;
+    color: #000000;
+    letter-spacing: 2px;
+    margin-right: 50px;
+}
+
+.navbar-brand span {
+    color: var(--color-secondary);
+}
+
+.navbar a.nav-link {
+    color: #000000;
+    font-family: var(--font-primary);
+    padding: 10px 40px !important;
+    letter-spacing: 2px;
+    border-bottom: var(--color-primary);
+    transition: 0.5s ease;
+    font-size: 18px;
+}
+
+    .navbar a.nav-link:hover {
+        color: #000000;
+        border-bottom: 2px solid var(--color-primary);
+    }
+
+.navbar .d-flex .cta {
+    padding: 8px 10px;
+    color: var(--color-white);
+    font-family: var(--font-primary);
+    background-color: #427a5b;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-top: 10px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+/* Banner */
+
+.content {
+    position: absolute;
+    right: 30%;
+    top: 30%;
+    width: 90%;
+    max-width: 900px;
+    text-align: center;
+    color: #ffffff;
+}
+
+
+/*  estiliza e animando o texto h1 dentro do banner */
+.content h1 {
+    display: block;
+    font-family: var(--font-primary);
+    width: fit-content;
+    /* põe a esquerda */
+    font-size: 40px;
+    position: relative;
+    color: transparent;
+    animation: text_reveal 1s ease forwards;
+    animation-delay: 1s;
+}
+
+    /* animação de entrada pra cada parte o texto */
+    .content h1:nth-child(1) {
+        animation-delay: 1s;
+    }
+
+    .content h1:nth-child(2) {
+        animation: text_reveal_name 1s ease forwards;
+        animation-delay: 2s;
+    }
+
+/* estiliza o botão cta */
+.content .cta {
+    display: block;
+    width: fit-content;
+    padding: 8px 10px;
+    color: #427a5b;
+    background-color: transparent;
+    border: 3px solid #427a5b;
+    font-size: 20px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin-top: 20px;
+    border-radius: 20px;
+    transition: .3s ease;
+    transition-property: background-color, color;
+    cursor: pointer;
+}
+
+    /* faz com que o botão mude quando passa o mouse */
+    .content .cta:hover {
+        color: white;
+        background-color: #427a5b;
+    }
+
+/* Agendamento */
+
+.search .d-flex {
+    margin-bottom: -33rem;
+}
+
+.search-box {
+    position: absolute;
+    bottom: 0;
+    left: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #ffffff;
+    padding: 30px 50px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
+}
+
+    .search-box .inputBox {
+        margin: 0 20px;
+    }
+
+        .search-box .inputBox p {
+            color: #222;
+            margin-bottom: 10px;
+            font-family: var(--font-primary);
+            letter-spacing: 1.5px;
+            font-size: 18px;
+        }
+
+        .search-box .inputBox input {
+            border: 1px solid #222;
+            letter-spacing: 1.5px;
+            outline: none;
+            padding: 10px;
+            width: 100%;
+            min-width: 150px;
+            font-size: 14px;
+        }
+
+            .search-box .inputBox input[type="Submit"] {
+                outline: none;
+                border: 3px solid #427a5b;
+                background: transparent;
+                color: #427a5b;
+                cursor: pointer;
+                letter-spacing: 2px;
+                padding: 13px;
+                font-size: 14px;
+                border-radius: 20px;
+                transition: .3s ease;
+                transition-property: background-color, color;
+            }
+
+                .search-box .inputBox input[type="Submit"]:hover {
+                    color: white;
+                    background-color: #427a5b;
+                }
+
+/* FIM Agendamento */
+
+/* SEÇÃO Destinos */
+.destinos {
+    margin-top: 400px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 0 50px;
+}
+
+    .destinos .title .title-primary:before {
+        content: 'destinos';
+    }
+
+    .destinos .row {
+        justify-content: center;
+    }
+
+    .destinos .col-lg-3 {
+        margin-right: 20px;
+        padding: 20px;
+    }
+
+    .destinos .card-design .card-text {
+        background-color: whitesmoke;
+        width: 100%;
+        padding: 20px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .destinos .card-design .btn {
+        padding: 8px 15px;
+        color: var(--color-secondary);
+        background-color: transparent;
+        border: 3px solid var(--color-secondary);
+        border-radius: 20px;
+        transition: .3s ease;
+        transition-property: background-color, color;
+    }
+
+        .destinos .card-design .btn:hover {
+            color: white;
+            background-color: var(--color-secondary);
+        }
+
+/* FIM SEÇÃO Destinos */
+
+/* ADS */
+
+.ads {
+    width: 100%;
+    text-align: center;
+    margin: 50px 0;
+}
+
+    .ads h4 {
+        color: var(--color-secondary);
+        position: relative;
+        font-size: 20px;
+        font-family: var(--font-secondary);
+        text-align: center;
+    }
+
+    .ads h1 {
+        color: var(--color-primary);
+        position: relative;
+        font-size: 40px;
+        font-family: var(--font-secondary);
+        margin-bottom: 50px;
+        font-weight: 700;
+    }
+
+    .ads h4:before {
+        content: 'serviços';
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        font-weight: 300;
+        transform: translate(-50%, -50%);
+        font-size: 100px;
+        opacity: 0.1;
+        z-index: -1;
+    }
+
+    .ads .cards-ads {
+        padding: 30px 20px;
+        background-color: white;
+        border: 2px solid var(--color-secondary);
+        border-radius: 20px;
+        transition: 0.2s ease;
+    }
+
+        .ads .cards-ads:hover {
+            background-color: var(--color-white);
+        }
+
+            .ads .cards-ads:hover > a {
+                color: var(--color-secondary)
+            }
+
+        .ads .cards-ads i.fas {
+            color: var(--color-secondary);
+            font-size: 50px;
+            margin-bottom: 20px;
+        }
+
+    .ads .col-lg-4 {
+        padding: 20px 20px;
+    }
+
+    .ads .cards-ads h4 {
+        font-family: var(--font-primary);
+        color: var(--color-primary);
+        font-weight: 600;
+    }
+
+    .ads .cards-ads p {
+        font-size: 18px;
+        font-family: var(--font-primary);
+    }
+
+    .ads .cards-ads a {
+        font-family: var(--font-primary);
+        color: var(--color-primary);
+        font-weight: 700;
+    }
+
+/* FIM ADS */
+
+/* FOOTER */
+
+footer {
+    width: 100%;
+    padding-top: 50px;
+    background-color: var(--color-primary);
+    color: var(--color-white);
+}
+
+.footer h4 {
+    font-family: var(--font-secondary);
+    margin-bottom: 40px;
+}
+
+.footer p {
+    font-size: 16px;
+    font-family: var(--font-primary);
+    margin-bottom: 20px;
+    opacity: 0.8;
+    line-height: 30px;
+}
+
+.footer ul.social-icon {
+    display: flex;
+    list-style: none;
+}
+
+    .footer ul.social-icon li {
+        margin: 0 10px;
+    }
+
+        .footer ul.social-icon li a {
+            display: block;
+            width: 50px;
+            height: 50px;
+            line-height: 50px;
+            background-color: var(--color-primary);
+            border-radius: 100%;
+            transition: 0.2s ease;
+        }
+
+            .footer ul.social-icon li a:hover {
+                color: var(--color-white);
+                background-color: var(--color-secondary);
+            }
+
+.footer .links a {
+    opacity: 0.8;
+}
+
+.footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+    .footer ul > li {
+        margin: 5px 0;
+        font-size: 16px;
+        letter-spacing: 2px;
+        font-family: var(--font-primary);
+        font-weight: 700;
+    }
+
+        .footer ul > li > a {
+            color: var(--color-white);
+            text-align: center;
+            transition: 0.3s ease;
+        }
+
+            .footer ul > li > a:hover {
+                color: var(--color-secondary);
+            }
+
+.footer .col-lg-2 {
+    margin-left: 50px;
+}
+
+footer .imgs img {
+    width: 100%;
+    margin: 10px;
+    border-radius: 30px;
+}
+
+footer .footer-copyright {
+    width: 100%;
+    padding: 20px 0;
+    margin-bottom: 10px;
+}
+
+    footer .footer-copyright .logo {
+        font-family: var(--font-secondary);
+        font-weight: 500;
+        font-size: 22px;
+    }
+
+        footer .footer-copyright .logo span {
+            font-family: var(--font-primary);
+            font-weight: 700;
+            color: var(--color-secondary);
+            margin-right: 10px;
+        }
+
+    footer .footer-copyright p {
+        font-family: var(--font-primary);
+        font-size: 14px;
+    }
+
+    footer .footer-copyright .item span {
+        font-family: var(--font-primary);
+        color: var(--color-secondary);
+        font-size: 16px;
+        font-weight: 700;
+    }
+/* FIM FOOTER */
+
+/* keyframes: transições das animações */
+
+@keyframes text_reveal {
+    100% {
+        color: black;
+    }
+}
+
+@keyframes text_reveal_name {
+    100% {
+        color: #427a5b;
+        font-weight: 900;
+    }
+}
+
+/* DESTINO */
+
+.pagdestinos .container {
+    margin-top: -22rem;
+}
+
+/* Promoções */
+.promos {
+    margin-top: 2rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 0 50px;
+}
+
+    .promos .title .title-primary:before {
+        content: 'ofertas';
+    }
+
+    .promos .row {
+        justify-content: center;
+    }
+
+    .promos .col-lg-3 {
+        margin-right: 20px;
+        padding: 20px;
+    }
+
+    .promos .card-design .card-text {
+        background-color: whitesmoke;
+        width: 100%;
+        padding: 20px;
+        display: flex;
+        justify-content: space-between;
+        border-radius: 10px;
+    }
+
+    .promos .card-design .btn {
+        padding: 8px 15px;
+        color: var(--color-secondary);
+        background-color: transparent;
+        border: 3px solid var(--color-secondary);
+        border-radius: 20px;
+        transition: .3s ease;
+        transition-property: background-color, color;
+    }
+
+        .promos .card-design .btn:hover {
+            color: white;
+            background-color: var(--color-secondary);
+        }
+
+/* FIM Promoções */
+
+/* Descontos */
+.descontos {
+    margin-top: 50px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 0 50px;
+}
+
+    .descontos .title .title-primary:before {
+        content: 'descontos';
+    }
+
+    .descontos .row {
+        justify-content: center;
+    }
+
+    .descontos .col-lg-3 {
+        margin-right: 20px;
+        padding: 20px;
+    }
+
+    .descontos .card-design .card-text {
+        background-color: whitesmoke;
+        width: 100%;
+        padding: 20px;
+        display: flex;
+        justify-content: space-between;
+        border-radius: 10px;
+    }
+
+    .descontos .card-design .btn {
+        padding: 8px 15px;
+        color: var(--color-secondary);
+        background-color: transparent;
+        border: 3px solid var(--color-secondary);
+        border-radius: 20px;
+        transition: .3s ease;
+        transition-property: background-color, color;
+    }
+
+        .descontos .card-design .btn:hover {
+            color: white;
+            background-color: var(--color-secondary);
+        }
+
+        /* CONTATO */
+
+.contato .banner {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+
+.contato .title .title-primary:before {
+    content: 'Contato';
+}
+
+.contato .title-secondary {
+    margin-bottom: 3rem;
+}
+
+.contato form {
+    width: 90%;
+    max-width: 600px;
+    margin-top: 4rem;
+}
+
+.contato .input-group {
+    margin-bottom: 35px;
+    position: relative;
+}
+
+.contato input, textarea {
+    width: 100%;
+    padding: 10px;
+    outline: 0;
+    border: 1px solid var(--color-secondary);
+    color: var(--color-white);
+    background: transparent;
+    font-size: 15px;
+}
+
+.contato label {
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding: 10px;
+    color: var(--color-secondary);
+    cursor: text;
+    transition: 0.2s ease;
+    font-weight: 700;
+}
+
+.contato button {
+    padding: 10px 0;
+    color: var(--color-secondary);
+    outline: none;
+    background: transparent;
+    border: 1px solid var(--color-secondary);
+    width: 100%;
+}
+
+.contato input:focus ~ label,
+input:valid ~ label,
+textarea:focus ~ label,
+textarea:valid ~ label {
+    top: -35px;
+    font-size: 14px;
+}
+
+.contato .row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+    .contato .row .input-group {
+        flex-basis: 48%;
+    }
+
+        .contato .row .input-group i {
+            margin-left: 10px;
+        }
+
+
+.contato i {
+    margin-right: 10px;
+}
+
+/* Gerenciamento */
+
+.gerencia {
+    margin-top: 3rem;
+    letter-spacing: 2px;
+}
+
+.gerencia .title .title-primary:before {
+    content: 'Usuários';
+    letter-spacing: 1px;
+}
+
+.gerencia hr {
+    width: 85rem;
+}
+
+.gerencia h2 { 
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    font-family: var(--font-primary);
+    color: var(--color-primary);
+}
+
+.gerencia input, select {
+    width: 25rem;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.gerencia .tocenter { 
+    margin-left: 10rem;
+}
+.gerencia .form-row, 
+.gerencia button {
+    margin-left: 10rem;
+}
+
+/* Responsividade */
+
+
